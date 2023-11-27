@@ -81,10 +81,12 @@ const Home = ({navigation}) => {
   const renderItem = ({item}) => (
     <View style={styles.item}>
       <View>
-        <Text onPress={() => fetchMedicalReport(item.pk)}>
+        <Text
+          style={{color: '#000'}}
+          onPress={() => fetchMedicalReport(item.pk)}>
           {item.full_name}
         </Text>
-        <Text>{item.email}</Text>
+        <Text style={{color: '#0c0c0c'}}>{item.email}</Text>
       </View>
       <View>
         <TouchableOpacity onPress={() => handleCheckRecord(item.pk)}>
@@ -153,6 +155,7 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
     paddingHorizontal: 10,
     marginRight: 10,
+    color: '#000',
   },
   item: {
     padding: 20,
