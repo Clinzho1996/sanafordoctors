@@ -16,8 +16,7 @@ import Password from '../screens/Password';
 import Settings from '../screens/Settings';
 import Notifications from '../screens/Notifications';
 import Welcome from '../screens/Welcome';
-import AddMeds from '../screens/AddMeds';
-import AddReminder from '../screens/AddReminder';
+import PatientRecord from '../screens/PatientRecord';
 
 const AppStack = () => {
   const Stack = createStackNavigator();
@@ -44,8 +43,7 @@ const AppStack = () => {
       <Stack.Screen name="Settings" component={Settings} />
       <Stack.Screen name="Notifications" component={Notifications} />
       <Stack.Screen name="Welcome" component={Welcome} />
-      <Stack.Screen name="AddMeds" component={AddMeds} />
-      <Stack.Screen name="AddReminder" component={AddReminder} />
+      <Stack.Screen name="PatientRecord" component={PatientRecord} />
     </Stack.Navigator>
   );
 };

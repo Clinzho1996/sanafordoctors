@@ -76,7 +76,7 @@ const OnboardingTwo = ({navigation}) => {
             paddingTop: 20,
             fontFamily: 'Inter-Regular',
           }}>
-          Gentle reminders to take your medications on time, reducing the risk
+          Reminders for your patients take their meds on time, reducing the risk
           of missing doses.
         </Text>
         <TouchableOpacity

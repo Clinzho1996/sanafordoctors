@@ -22,7 +22,7 @@ export const androidCameraPermission = () =>
           granted['android.permission.READ_EXTERNAL_STORAGE'] !== 'granted' ||
           granted['android.permission.READ_MEDIA_IMAGES'] !== 'granted'
         ) {
-          showError("Don't have required permission.Please allow permissions");
+          console.log("Don't have required permission.Please allow permissions");
           return resolve(false);
         }
         return resolve(true);

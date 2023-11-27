@@ -30,6 +30,7 @@ const Register = ({navigation}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [phone, setPhone] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -42,11 +43,12 @@ const Register = ({navigation}) => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        'https://med-adherence-app.vercel.app/api/accounts/create/',
+        'https://med-adherence-app.vercel.app/api/accounts/doctor-register/',
         {
           full_name: name,
           email: email,
           password: password,
+          phone: phone,
         },
       );
       // Check if response.data.id exists before setting it in AsyncStorage
@@ -134,9 +136,23 @@ const Register = ({navigation}) => {
             marginTop: 20,
           }}>
           <TextInput
-            placeholder="name@example.com"
+            placeholder="Email Address"
             placeholderTextColor="#131313"
             onChangeText={text => setEmail(text)}
+            style={{color: '#131313', fontFamily: 'Inter-Bold', fontSize: 16}}
+          />
+        </View>
+        <View
+          style={{
+            backgroundColor: '#fff',
+            paddingHorizontal: 20,
+            borderRadius: 30,
+            marginTop: 20,
+          }}>
+          <TextInput
+            placeholder="Phone Number"
+            placeholderTextColor="#131313"
+            onChangeText={text => setPhone(text)}
             style={{color: '#131313', fontFamily: 'Inter-Bold', fontSize: 16}}
           />
         </View>
@@ -210,7 +226,7 @@ const Register = ({navigation}) => {
       </View>
       <View
         style={{
-          marginTop: 100,
+          marginTop: 30,
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'space-between',

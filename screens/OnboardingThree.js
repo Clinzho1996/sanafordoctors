@@ -76,7 +76,8 @@ const OnboardingThree = ({navigation}) => {
             paddingTop: 20,
             fontFamily: 'Inter-Regular',
           }}>
-          Monitor your adherence and track progress effortlessly.
+          Monitor your patient's adherence and track their progress
+          effortlessly.
         </Text>
         <TouchableOpacity
           onPress={handlePress}

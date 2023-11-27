@@ -74,7 +74,7 @@ const Onboarding = ({navigation}) => {
             paddingTop: 20,
             fontFamily: 'Inter-Regular',
           }}>
-          Tailored medication schedules to fit your unique routine and needs.
+          Tailored medication schedules to fit your hospitals routine and needs.
         </Text>
         <TouchableOpacity
           onPress={handlePress}
